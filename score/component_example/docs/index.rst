@@ -24,7 +24,7 @@
    :status: draft
    :version: 1
    :safety: ASIL_B
-   :security: NO
+   :security: YES
    :realizes: wp__cmpt_request
    :tags: template
 
@@ -43,20 +43,31 @@
     The above directives must be updated according to your Component.
 
     - Modify ``document`` to be your Component Name
-    - Modify ``id`` to be your Component Name in upper snake case preceded by ``doc__``
+    - Modify ``id`` to be your Component Name in lower snake case preceded by ``doc__``
     - Adjust ``status`` to be ``valid``
-    - Adjust ``safety`` and ``tags`` according to your needs
+    - Adjust ``safety``, ``security`` and ``tags`` according to your needs
+    - Take the ``comp`` directive out of the code block and adapt it to your Component
+
+.. note::
+   This document is the Component Request (CR) of the component. It describes the current state of the component.
+   Content that belongs to a change of the component, like rationale, rejected ideas, open issues and the impact on
+   safety, security and license, is documented in a Decision Record (:need:`gd_temp__change_decision_record`) and,
+   if needed, in an Impact Analysis (:need:`gd_temp__change_impact_analysis`).
 
 Abstract
 ========
 
 [A short (~200 word) description of the component.]
 
+Motivation
+==========
+
+[Explain why the component is needed: which features or stakeholder needs it serves and why existing components are not sufficient.]
 
 Specification
 =============
 
-[Describe the requirements, architecture of any component.] or
+[Describe the requirements and architecture of the component. Details are documented in the documents listed in Component Detail Information.]
 
 
 How to Teach This
@@ -73,10 +84,10 @@ Footnotes
 [A collection of footnotes cited in the CR, and a place to list non-inline hyperlink targets.]
 
 
-Further Documentation of the component can be found in the following sections:
-
 Component Detail Information
 ============================
+
+Further documentation of the component can be found in the following documents:
 
 .. note:: The documents listed below describe this component. Create separate architecture, safety-analysis, and security-analysis documents for subcomponents only when this component is decomposed into subcomponents and those artifacts apply.
 

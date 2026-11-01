@@ -1,5 +1,5 @@
 # *******************************************************************************
-# Copyright (c) 2025 Contributors to the Eclipse Foundation
+# Copyright (c) 2026 Contributors to the Eclipse Foundation
 #
 # See the NOTICE file(s) distributed with this work for additional
 # information regarding copyright ownership.
@@ -23,8 +23,7 @@ setup_starpls(
 copyright_checker(
     name = "copyright",
     srcs = [
-        "src",
-        "tests",
+        "score",
         "//:BUILD",
         "//:MODULE.bazel",
     ],
@@ -44,5 +43,20 @@ dash_license_checker(
 use_format_targets()
 
 docs(
+    bundles = [
+        {
+            "bundle": "//score/component_example:docs",
+            "mount_at": "components/component_example",
+        },
+        {
+            "bundle": "//examples:docs",
+            "mount_at": "examples",
+        },
+    ],
+    data = [
+        "@score_process_description//:needs_json",
+    ],
+    project = "Module Template Project",
+    project_url = "https://eclipse-score.github.io/module_template/",
     source_dir = "docs",
 )
