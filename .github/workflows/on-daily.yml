@@ -24,4 +24,4 @@ on:
 
 jobs:
   docs-cleanup:
-    uses: eclipse-score/cicd-workflows/.github/workflows/daily.yml@7e8ea4c61756b931622ff979835469b93b162920 # v2026-06-10
+    uses: eclipse-score/cicd-workflows/.github/workflows/daily.yml@645209ec9c22da39721f63ac23019f651469203c # v2026-06-10
