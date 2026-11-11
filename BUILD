@@ -44,5 +44,10 @@ dash_license_checker(
 use_format_targets()
 
 docs(
+    external_needs = [
+        "@score_platform//:needs_json",
+        "@score_process_description//:needs_json",
+        "@score_docs_as_code//:needs_json",
+    ],
     source_dir = "docs",
 )

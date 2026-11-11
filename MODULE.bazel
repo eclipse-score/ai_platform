@@ -12,7 +12,7 @@
 # *******************************************************************************
 module(name = "cpp_rust_template_repository")
 
-bazel_dep(name = "rules_python", version = "1.4.1")
+bazel_dep(name = "rules_python", version = "1.8.5")
 
 PYTHON_VERSION = "3.12"
 
@@ -45,13 +45,17 @@ use_repo(llvm, "llvm_toolchain_llvm")
 register_toolchains("@llvm_toolchain//:all")
 
 # tooling
-bazel_dep(name = "score_tooling", version = "1.0.1")
+bazel_dep(name = "score_tooling", version = "1.1.2")
 
 bazel_dep(name = "aspect_rules_lint", version = "1.5.3", dev_dependency = True)
 bazel_dep(name = "buildifier_prebuilt", version = "8.2.0.2", dev_dependency = True)
 
 #docs-as-code
-bazel_dep(name = "score_docs_as_code", version = "1.1.0")
+bazel_dep(name = "score_docs_as_code", version = "8.6.0")
+
+bazel_dep(name = "score_platform", version = "0.7.4", dev_dependency = True)
+bazel_dep(name = "score_process_description", version = "2.2.2", dev_dependency = True)
+
 bazel_dep(
     name = "score_devcontainer",
     version = "1.11.2",
