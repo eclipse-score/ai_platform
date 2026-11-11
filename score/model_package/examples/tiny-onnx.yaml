@@ -1,0 +1,33 @@
+# *******************************************************************************
+# Copyright (c) 2026 Contributors to the Eclipse Foundation
+#
+# See the NOTICE file(s) distributed with this work for additional
+# information regarding copyright ownership.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Apache License Version 2.0 which is available at
+# https://www.apache.org/licenses/LICENSE-2.0
+#
+# SPDX-License-Identifier: Apache-2.0
+# *******************************************************************************
+name: tiny-classifier
+version: 1.0.0
+hash: sha256:0000000000000000000000000000000000000000000000000000000000000000
+files:
+  - path: model/tiny.onnx
+    hash: sha256:1111111111111111111111111111111111111111111111111111111111111111
+runtime: onnxruntime>=1.17.0
+interface:
+  inputs:
+    - name: features
+      dtype: float32
+      shape: [1, 4]
+  outputs:
+    - name: scores
+      dtype: float32
+      shape: [1, 3]
+safety: QM
+signature: signatures/manifest.sig
+rollback:
+  min_version: 1.0.0
+bom: bom/ai-bom.spdx.json

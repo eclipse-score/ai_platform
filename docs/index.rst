@@ -15,6 +15,11 @@
 Module Template Documentation
 =============================
 
+.. toctree::
+   :maxdepth: 2
+
+   model_package/index
+
 This documentation describes the structure, usage and configuration of the Bazel-based C++/Rust module template.
 
 .. contents:: Table of Contents
@@ -37,6 +42,8 @@ Requirements
    :security: YES
    :reqtype: Functional
    :rationale: Ensure documentation builds are possible for all modules
+   :version: 1
+   :valid_from: v0.1.0
 
 
 Project Layout
